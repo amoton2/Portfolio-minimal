@@ -11,19 +11,20 @@
 $white: rgb(255,255,255);
 $orange: rgb(246, 133, 31);
 
-// Greys
+//---Greys
 $lt-grey: rgb(229, 229, 229);
+$line-grey: rgb(235, 235, 235);
    $grey: rgb(106, 106, 106);
 $bc-grey: rgb(119, 119, 121);
 $hl-grey: rgb(51, 51, 51);
 
-//Warm Greys
+//------Warm Greys
 
 $warm-very-ltgrey: rgb(233,230,225);
      $warm-ltgrey: rgb(163, 157, 149);
 	$warm-drkgrey: rgb(60, 54, 44);
 
-//Typography
+//------Typography
 
 
 @import "partials/typography";
@@ -51,8 +52,25 @@ h1, h2, h3, h4, h5, h6, .gigantic{
 }
 .gigantic{
 	font-weight: $ultra-thin;
+	font-size: 40em;
+	letter-spacing: -0.40em;
+	line-height: 0.825em;
 }
-h1, h2, h3, h4{
+.sectionheaders{
+	font-weight: $light-con;
+	font-size: 11em;
+	letter-spacing: -1.196em;
+	line-height: 1em;
+	margin-bottom: 1em;
+	
+}
+.numbers{
+	font-weight: $ultra-thin;
+	font-size: 30em;
+	letter-spacing: -0.60em;
+	line-height: 0.83333333333em;
+}
+h1, h2, h3{
 	font-weight: $light-con;
 }
 h1{
@@ -72,6 +90,25 @@ h3{
 	letter-spacing: -1.96em;
 	line-height: 1em; 
 	margin-bottom: 1em * 2;
+}
+h4{
+	font-weight: $ultra-light;
+	font-size: 4em;
+	line-height: 1.25em;
+	margin-bottom: 1.25em;
+}
+h5{
+	font-weight: $ultra-con;
+	font-size: 2.66666666667em;
+	line-height: .80em;
+	line-height: 1.125em;
+	margin-bottom: 1.125em;
+}
+h6{
+	font-weight: $bold-con;
+	font-size: 2em;
+	line-height: 1em;
+	margin-bottom: 1em;
 }
 p{
 	font-size: 2.66666666667em;
