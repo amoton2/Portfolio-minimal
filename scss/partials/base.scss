@@ -85,20 +85,18 @@ h1{
 h2{
 	font-size: 8em;
 	line-height: 1em;
-	margin-bottom: 1em * 2;
 	letter-spacing: -2px;
 }
 h3{
 	font-size: 5em;
 	letter-spacing: 1px;
-	line-height: 1em; 
-	margin-bottom: 1em * 2;
+	line-height: 1em;
+	letter-spacing: -1px; 
 }
 h4{
 	font-weight: $ultra-light;
 	font-size: 4em;
 	line-height: 1.25em;
-	margin-bottom: 1.25em;
 }
 h5{
 	font-weight: $ultra-con;
@@ -268,9 +266,12 @@ a{
 		height: 100%;
 		background-color: $orange;
 		border-right: 1px solid darken($orange,15%);
-		img{
-			
-		}
+		@include transition (all 0.2s ease-in-out);
+		
+	}
+	figure:hover{
+		background-color: darken($orange,8%);
+		cursor: pointer;
 	}
 	nav {
 		margin-left: auto;
@@ -295,10 +296,17 @@ a{
 					width: 18em;
 					height: 100%;
 					h6{
-						color: $bc-grey;
+						color: rgb(125, 125, 125);
 						text-align: center;
 						padding: 2em 0;
-					}
+						@include transition (all 0.2s ease-in-out);
+						}
+					
+					
+				}
+				a:hover h6,
+				a:focus h6{
+					color: $orange;
 				}				
 			}
 		}

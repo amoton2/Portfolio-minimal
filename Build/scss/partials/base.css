@@ -79,20 +79,18 @@ h1 {
 h2 {
   font-size: 8em;
   line-height: 1em;
-  margin-bottom: 2em;
   letter-spacing: -2px; }
 
 h3 {
   font-size: 5em;
   letter-spacing: 1px;
   line-height: 1em;
-  margin-bottom: 2em; }
+  letter-spacing: -1px; }
 
 h4 {
   font-weight: 200;
   font-size: 4em;
-  line-height: 1.25em;
-  margin-bottom: 1.25em; }
+  line-height: 1.25em; }
 
 h5 {
   font-weight: 300;
@@ -286,7 +284,13 @@ a {
     width: 15em;
     height: 100%;
     background-color: #f6851f;
-    border-right: 1px solid #c16008; }
+    border-right: 1px solid #c16008;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+  .main-nav figure:hover {
+    background-color: #e37109;
+    cursor: pointer; }
   .main-nav nav {
     margin-left: auto;
     height: 100%; }
@@ -334,6 +338,12 @@ a {
           width: 18em;
           height: 100%; }
           .main-nav nav ul li a h6 {
-            color: #777779;
+            color: #7d7d7d;
             text-align: center;
-            padding: 2em 0; }
+            padding: 2em 0;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out; }
+        .main-nav nav ul li a:hover h6,
+        .main-nav nav ul li a:focus h6 {
+          color: #f6851f; }

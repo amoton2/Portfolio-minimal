@@ -1,1 +1,209 @@
 @import "partials/base.scss";
+
+
+$fg-column: 117px;            
+$fg-gutter: 0px; 
+$fg-max-columns: 12;
+
+
+.main-content{
+	@include display(flex);
+	@include flex-direction(row);
+	@include justify-content(flex-start);
+	@include align-items(stretch);
+	width: flex-grid(12);
+	position: relative;
+	overflow: hidden;
+	min-height: 118em;
+	height: 100%;
+	img{
+		width: 100%;
+		overflow: hidden;
+	}
+	figure{
+		position: relative;
+		overflow: hidden;
+		@include transition(all 0.3s ease);
+		
+		h5:first-child{
+			margin-bottom: 0;
+		}
+		div{
+			position: absolute;
+			padding: 8%;
+		
+		}
+	}
+	a:hover>figure{
+		-webkit-filter: blur(2px);
+		-moz-filter: blur(2px);
+		filter: blur(2px);
+		margin: -2px -2px 0 0;
+	}
+	a{
+		
+		.mask{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			top: 0;
+			left: 0;
+			opacity:0;
+			@include transition(all 0.2s ease-in);
+		}
+		.trans-btn{
+				position: absolute;
+				background: transparent;
+				border: 1px solid rgba(255, 255, 255, .9);
+				padding: 1.125em*4 2em;
+				text-transform: uppercase;
+				text-align: center;
+				width: 50%;
+				margin: 0 auto;
+				opacity:0;
+				top: 0;
+				left: 22%;
+				@include transition(all 0.3s ease-in-out 0.1s);
+				h5{
+				color: $white;
+				letter-spacing: 2px;
+				margin-bottom: 0;
+				}	
+			}
+	}
+		
+	a:hover>.mask{
+		
+		
+		opacity: 1;
+		
+		.trans-btn{
+			opacity: 1;
+			top: 37%;
+		}
+		.trans-btn:hover{
+			background: rgba(0, 0, 0, .4);
+		}
+	
+	}
+}
+.col-lrg{
+	width: flex-grid(5);
+}
+.col-small{
+	width: flex-grid(3);
+}
+.col-med{
+	width: flex-grid(4);
+}
+.small{
+	width: flex-grid(6);
+}
+.last{
+	@include display(flex);
+	@include flex-flow(row wrap);
+	
+	.item{
+		@include display(flex);
+		@include flex-direction(column);
+	}
+}
+.gmcvb{
+	background: rgb(0,189,200);
+	position: relative;
+	min-height: 118em;
+	height: 100%;
+	overflow: hidden;
+	a:hover>.mask{
+		background: rgba(1,183,193, .8);
+	}
+	img{
+		max-width: 581px; 
+		float: right;
+	}
+	
+}
+.bp{
+	position: relative;
+	background: rgba(200, 200, 200, .6);
+	max-height: 37em;
+	height: 31.3559322034%;
+	overflow: hidden;
+	img{
+		width: auto;
+		height: 100%;
+		max-height: 224px;
+	}
+	a:hover>.mask{
+		background: rgba(200,192,182, .8);
+	}
+}
+.usaa{
+	position: relative;
+	background: rgb(185,211,228);
+	min-height: 81em;
+	height: 68.64406779661016%;
+	overflow: hidden;
+	figure div:first-child{
+		bottom: 0px;
+	}
+	img{
+		max-width: 360px;
+		float: right;
+	}
+	a:hover>.mask{
+		background: rgba(185,211,228, .8);
+	}
+}
+.gmcvbmobile{
+	position: relative;
+	background: rgb(249,192,0);
+	min-height: 48em;
+	height: 40.67796610169492%;
+	overflow: hidden;
+	img{
+		width: auto;
+		height: 100%;
+		max-height: 288px;
+	}
+	a:hover>.mask{
+		background: rgba(249,192,0, .8);
+	}
+}
+.joingr{
+	position: relative;
+	background: rgb(214,25,5);
+	min-height: 70em;
+	height: 59.32203389830508%;
+	overflow: hidden;
+	img{
+		width: auto;
+		height: 100%;
+		max-height: 420px;
+	}
+	a:hover>.mask{
+		background: rgba(214,25,5, .8);
+	}
+}
+.fc{
+	background: rgba(200, 200, 200, .2);
+	min-height: 35em;
+	height: 29.66101694915254%;
+}
+.ac{
+	background: rgba(200, 200, 200, .1);
+	min-height: 35em;
+	height: 29.66101694915254%;
+}
+
+
+@media screen and (min-width: 460px) and (max-width: 839px) {
+
+
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 459px) {
+
+}
