@@ -39,6 +39,9 @@ table {
 .white {
   color: white; }
 
+img {
+  image-rendering: crisp-edges; }
+
 body {
   font-size: 6px;
   line-height: 6px;
@@ -73,11 +76,12 @@ h1, h2, h3 {
 
 h1 {
   font-size: 17em;
-  line-height: 1.0625em;
-  margin-bottom: 2.125em; }
+  line-height: 1em;
+  margin-bottom: 1em;
+  letter-spacing: -5px; }
 
 h2 {
-  font-size: 8em;
+  font-size: 7em;
   line-height: 1em;
   letter-spacing: -2px; }
 
@@ -108,9 +112,12 @@ h6 {
 
 p {
   font-size: 2.66666666667em;
-  letter-spacing: .80em;
   line-height: 1.5em;
   margin-bottom: 1.5em; }
+
+small {
+  font-size: 2em;
+  line-height: 1em; }
 
 a {
   text-decoration: none; }
@@ -244,7 +251,7 @@ a {
   -moz-flex-direction: row;
   flex-direction: row;
   -ms-flex-direction: row; }
-  .main-nav figure {
+  .main-nav > figure {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     align-self: flex-start;
@@ -288,6 +295,8 @@ a {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; }
+    .main-nav > figure img {
+      width: 8.333em; }
   .main-nav figure:hover {
     background-color: #e37109;
     cursor: pointer; }

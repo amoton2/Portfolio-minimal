@@ -39,6 +39,9 @@ table {
 .white {
   color: white; }
 
+img {
+  image-rendering: crisp-edges; }
+
 body {
   font-size: 6px;
   line-height: 6px;
@@ -73,11 +76,12 @@ h1, h2, h3 {
 
 h1 {
   font-size: 17em;
-  line-height: 1.0625em;
-  margin-bottom: 2.125em; }
+  line-height: 1em;
+  margin-bottom: 1em;
+  letter-spacing: -5px; }
 
 h2 {
-  font-size: 8em;
+  font-size: 7em;
   line-height: 1em;
   letter-spacing: -2px; }
 
@@ -108,9 +112,12 @@ h6 {
 
 p {
   font-size: 2.66666666667em;
-  letter-spacing: .80em;
   line-height: 1.5em;
   margin-bottom: 1.5em; }
+
+small {
+  font-size: 2em;
+  line-height: 1em; }
 
 a {
   text-decoration: none; }
@@ -244,7 +251,7 @@ a {
   -moz-flex-direction: row;
   flex-direction: row;
   -ms-flex-direction: row; }
-  .main-nav figure {
+  .main-nav > figure {
     -webkit-align-self: flex-start;
     -moz-align-self: flex-start;
     align-self: flex-start;
@@ -288,6 +295,8 @@ a {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; }
+    .main-nav > figure img {
+      width: 8.333em; }
   .main-nav figure:hover {
     background-color: #e37109;
     cursor: pointer; }
@@ -450,7 +459,7 @@ a {
   width: 25%; }
 
 .col-med {
-  width: 33.33333%; }
+  width: 33.5%; }
 
 .small {
   width: 50%; }
@@ -491,7 +500,9 @@ a {
   .gmcvb a:hover > .mask {
     background: rgba(1, 183, 193, 0.8); }
   .gmcvb img {
-    max-width: 581px;
+    width: auto;
+    height: 100%;
+    max-height: 708px;
     float: right; }
 
 .bp {
@@ -516,7 +527,9 @@ a {
   .usaa figure div:first-child {
     bottom: 0px; }
   .usaa img {
-    max-width: 360px;
+    width: auto;
+    height: 100%;
+    max-height: 486px;
     float: right; }
   .usaa a:hover > .mask {
     background: rgba(185, 211, 228, 0.8); }
@@ -548,11 +561,29 @@ a {
     background: rgba(214, 25, 5, 0.8); }
 
 .fc {
+  position: relative;
   background: rgba(200, 200, 200, 0.2);
   min-height: 35em;
-  height: 29.66101694915254%; }
+  height: 29.66101694915254%;
+  overflow: hidden; }
+  .fc img {
+    width: auto;
+    height: 100%;
+    max-height: 210px; }
+  .fc a:hover > .mask {
+    background: rgba(240, 3, 60, 0.8); }
 
 .ac {
-  background: rgba(200, 200, 200, 0.1);
+  position: relative;
+  background: #002445;
   min-height: 35em;
-  height: 29.66101694915254%; }
+  height: 29.66101694915254%;
+  overflow: hidden; }
+  .ac figure div:first-child {
+    bottom: 0px; }
+  .ac img {
+    width: auto;
+    height: 100%;
+    max-height: 210px; }
+  .ac a:hover > .mask {
+    background: rgba(0, 36, 69, 0.8); }

@@ -1,0 +1,62 @@
+@import "vendor/bourbon/bourbon";
+
+// variables
+
+$fg-column: 73px;
+$fg-gutter: 24px;
+$fg-max-columns: 12;
+
+.row {
+	@include display(flex);
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+    position: relative;
+	width: 100%;
+	max-width: 190em;
+	margin: 0 auto;
+	padding-left: flex-gutter();
+	padding-right: flex-gutter();
+}
+.col{
+	margin-right: flex-gutter();
+	border:0px solid rgba(0,0,0,0);
+	@include box-sizing(border-box);
+    -webkit-background-clip:padding-box !important;
+       -moz-background-clip:padding-box !important;
+            background-clip:padding-box !important;
+}
+.col:last-child{
+	margin-right: 0px;
+}
+figure img{
+	width:100%;
+}
+.main-content{
+	overflow: hidden;
+}
+
+/*--- Desktop ---*/
+ @media screen and (min-width: 158em) {
+ 	.span1{
+ 		width: flex-grid(1); 
+ 	}
+ 	.span2{
+ 		width: flex-grid(2); 
+ 	}
+ 	.span3{
+ 		width: flex-grid(3); 
+ 	}
+  	.span4{
+ 		width: flex-grid(4); 
+ 	}
+ }
+ /*--- Tablet ---*/
+ @media screen and (min-width:128em) and (max-width: 157.9999em){
+
+
+ }
+ /*--- Mobile ---*/
+ @media screen and (min-width: 0em) and (max-width: 127.9999em){
+
+
+ }
