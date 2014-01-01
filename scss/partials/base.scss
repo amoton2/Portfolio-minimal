@@ -131,7 +131,47 @@ small{
 a{
 	text-decoration: none;
 }
-
+.btn{
+	border: none;
+	font-family: $univers;
+	font-size: 3em;
+	color: $hl-grey;
+	background: transparent;
+	cursor: pointer;
+	padding: 1.5em 7em;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: $ultra-con;
+	outline: none;
+	position: relative;
+	@include transition(all 0.3s);
+}
+.btn:after{
+	content: '';
+	position: absolute;
+	z-index: -1;
+	@include transition(all 0.3s);
+}
+.btn-work{
+	border: 1px solid rgb(163,157,149);
+	z-index: 1;
+}
+.btn-work:after {
+	width:100%;
+	height: 0;
+	top: 0;
+	left: 0;
+	background: rgb(163,157,149);
+}
+.btn-work:hover,
+.btn-work:active {
+	color: $white;
+}
+.btn-work:hover:after,
+.btn-work:active:after {
+	height: 100%;
+}
 /*-- The start of the navigation for pages--*/
 
 /* Modal effect */
@@ -322,5 +362,40 @@ a{
 			}
 		}
 	}
+}
+.subnav{
+	@include display(flex);
+	@include flex-direction(row);
+	@include justify-content(center);
+	background: rgb(233,230,225);
+	padding: 15em 0;
+}
+.page-footer{
+	background: rgb(60,54,44);
+	min-height:17em;
+	padding-top: 7em;
+	> div{
+		@include display(flex);
+		@include flex-direction(row);
+		@include justify-content(flex-start);
+		figure{
+			width: 9em;
+			@include align-self(flex-start);
+		}
+		small{
+			color: $white;
+			margin-left: auto;
+			padding-top: 1em;
+			a{
+				color: inherit;
+				font-weight: 700;
+			}
+			a:hover{
+				text-decoration: underline;
+			}
+		}
+
+	}
+
 }
 
