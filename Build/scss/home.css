@@ -39,8 +39,11 @@ table {
 .white {
   color: white; }
 
+.grey {
+  color: #6a6a6a; }
+
 img {
-  image-rendering: crisp-edges; }
+  height: auto; }
 
 body {
   font-size: 6px;
@@ -427,7 +430,7 @@ a {
   justify-content: center;
   -ms-flex-pack: center;
   background: #e9e6e1;
-  padding: 15em 0; }
+  padding: 8em 0; }
 
 .page-footer {
   background: #3c362c;

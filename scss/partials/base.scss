@@ -16,12 +16,16 @@ $orange: rgb(246, 133, 31);
 	color: $white;
 }
 
+
 //---Greys
 $lt-grey: rgb(229, 229, 229);
 $line-grey: rgb(235, 235, 235);
    $grey: rgb(106, 106, 106);
 $bc-grey: rgb(119, 119, 121);
 $hl-grey: rgb(51, 51, 51);
+.grey{
+	color: $grey;
+}
 
 //------Warm Greys
 
@@ -44,7 +48,8 @@ $base-font-size: 6px;
 $base-line-height: 6px;
 
 img{
-	@include image-rendering(crisp-edges);
+
+	height: auto;
 }
 
 body{
@@ -368,7 +373,7 @@ a{
 	@include flex-direction(row);
 	@include justify-content(center);
 	background: rgb(233,230,225);
-	padding: 15em 0;
+	padding: 8em 0;
 }
 .page-footer{
 	background: rgb(60,54,44);

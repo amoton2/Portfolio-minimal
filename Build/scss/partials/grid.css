@@ -23,11 +23,9 @@
   justify-content: flex-start;
   -ms-flex-pack: start;
   position: relative;
-  width: 100%;
+  width: 90%;
   max-width: 190em;
-  margin: 0 auto;
-  padding-left: 2.10526%;
-  padding-right: 2.10526%; }
+  margin: 0 auto; }
 
 .col {
   margin-right: 2.10526%;
@@ -43,7 +41,8 @@
   margin-right: 0px; }
 
 figure img {
-  width: 100%; }
+  width: auto;
+  max-width: 100%; }
 
 .main-content {
   overflow: hidden; }
