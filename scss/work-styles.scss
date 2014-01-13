@@ -31,10 +31,11 @@
 		@include flex-direction(row);
 		@include justify-content(flex-start);
 		padding-top: 5em;
-		max-height: 124em;
+		max-height: 123em;
 		article{
 			width: flex-grid(5);
 			padding-top: 10em;
+			position: relative;
 		}
 		figure{
 			width: flex-grid(9);
@@ -226,10 +227,11 @@
 		@include display(flex);
 		@include flex-direction(row);
 		@include justify-content(flex-start);
-		max-height: 124em;
+		max-height: 123em;
 		article{
 			width: flex-grid(5);
 			padding-top: 10em;
+			position: relative;
 		}
 		figure{
 			width: flex-grid(9);
@@ -345,10 +347,11 @@
 		@include display(flex);
 		@include flex-direction(row);
 		@include justify-content(flex-start);
-		max-height: 124em;
+		max-height: 123em;
 		article{
 			width: flex-grid(5);
 			padding-top: 10em;
+			position: relative;
 		}
 		figure{
 			width: flex-grid(7);
@@ -439,10 +442,11 @@
 		@include display(flex);
 		@include flex-direction(row);
 		@include justify-content(flex-start);
-		max-height: 124em;
+		max-height: 123em;
 		article{
 			width: flex-grid(5);
 			padding-top: 10em;
+			position: relative;
 		}
 		figure{
 			width: flex-grid(8);
@@ -524,25 +528,25 @@
 		}
 	}
 }
-.fc{
+.facecard{
 	> header{
-		@include background-image(90deg, rgb(177,185,191) 1%, rgb(255,255,255) 100%);
+		@include linear-gradient(90deg, rgb(202,204,207) 0%, rgb(242,243,244) 100%);
 		@include display(flex);
 		@include flex-direction(row);
 		@include justify-content(flex-start);
-		max-height: 124em;
+		max-height: 123em;
 		article{
 			width: flex-grid(5);
 			padding-top: 10em;
+			position: relative;
 		}
 		figure{
 			width: flex-grid(8);
 			margin-left: -17.105263157894736%;
-			margin-top: 23em;
 			img{
 				float: left;
-				width: 167.42%;
-				max-width: 1259px;
+				width: 166.23%;
+				max-width: 1250px;
 			}
 		}
 	}
@@ -579,8 +583,11 @@
 				@include display(flex);
 				@include flex-direction(row);
 				.col{
-					width: (5,10);
+					width: flex-grid(5,10);
 					margin-right: flex-gutter(10);
+					p{
+						margin-top: 1.5em;
+					}
 				}
 				figure{
 					img{
@@ -615,8 +622,129 @@
 		.row:last-child{
 			.col{
 				width: flex-grid(6);
-				margin-right: flex-gutter();
 			}
 		}
+	}
+}
+.bp{
+	> header{
+		@include linear-gradient(90deg, rgb(200,193,182) 0%, rgb(196,188,177) 100%);
+		@include display(flex);
+		@include flex-direction(row);
+		@include justify-content(flex-start);
+		max-height: 123em;
+		article{
+			width: flex-grid(5);
+			padding-top: 10em;
+			position: relative;
+		}
+		figure{
+			width: flex-grid(8);
+			margin-left: -17.105263157894736%;
+			img{
+				float: left;
+				width: 160.45%;
+				max-width: 1205px;
+			}
+		}
+	}
+	.intro-copy{
+		padding: 25em 0 10em 0;
+
+		h2{
+			width: flex-grid(12);
+			text-align: center;
+			margin-bottom: 1em;
+		}
+		> div{
+			@include justify-content(center);			
+			.innerwrapper{
+				width: flex-grid(10);
+				@include display(flex);
+				@include flex-direction(row);
+				p{
+					width: flex-grid(5, 10);
+					margin-right: flex-gutter(10);
+				}
+			}
+		}
+	}
+	.type-color{
+		header{
+			h2{
+				width: flex-grid(12);
+				text-align: center;
+				margin-bottom: 2em;
+
+			}
+		}
+		.row{
+			@include justify-content(center);			
+			.innerwrapper{
+				width: flex-grid(10);
+				@include display(flex);
+				@include flex-direction(row);
+				.type{
+					width: flex-grid(5,10);
+					margin-right: flex-gutter(10);
+					margin-bottom: 13em;
+				}
+				.type:last-child, .color:last-child{
+					margin-right: 0px;
+
+				}
+				.color{
+					width: flex-grid(2,10);
+					margin-right: flex-gutter(10);
+					margin-bottom: 17em;
+				}
+			}
+		}
+	}
+	.stationary{
+		header{
+			h2{
+				width: flex-grid(12);
+				text-align: center;
+				margin-bottom: 2em;
+			}
+		}
+		figure{
+			width: flex-grid(12);
+			img{
+				float: left;
+				width: 128.42%;
+				max-width: 1464px;
+				margin-left: -12%;
+			}
+		}
+	}
+	.site-design{
+		background: rgb(29,163,217);
+		padding-bottom: 10em;
+		header{
+			width:flex-grid(12);
+			margin-top: -17em;
+			z-index: 2;
+		}
+		article{
+			width: flex-grid(8);
+			margin: 0 auto;
+			text-align: center;
+			h1{
+				margin-top: -.5em;
+				color: $white;
+				margin-bottom: 0;
+				text-transform: uppercase;
+			}
+			p{
+				margin-top: 1.5em;
+			}
+
+		}
+		figure{
+			width:flex-grid(12);
+		}
+
 	}
 }

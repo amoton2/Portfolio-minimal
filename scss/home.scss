@@ -110,6 +110,10 @@ $fg-max-columns: 12;
     min-height: 118em;
     height: 100%;
     overflow: hidden;
+    h2{
+        font-size: 11em;
+        line-height: 0.90em;
+    }
     a:hover>.mask {
         background: rgba(1, 183, 193, 0.8);
     }
@@ -128,9 +132,9 @@ $fg-max-columns: 12;
     height: 31.3559322034%;
     overflow: hidden;
     img {
-        width: auto;
-        height: 100%;
-        max-height: 224px;
+        height: auto;
+        min-width:322px;
+        min-height: 224px;
     }
     a:hover>.mask {
         background: rgba(200, 192, 182, 0.8);
@@ -180,6 +184,7 @@ $fg-max-columns: 12;
     height: 59.32203389830508%;
     overflow: hidden;
     img {
+        float: right;
         width: auto;
         height: 100%;
         max-height: 420px;
@@ -196,9 +201,9 @@ $fg-max-columns: 12;
     height: 29.66101694915254%;
     overflow: hidden;
     img {
-        width: auto;
-        height: 100%;
-        max-height: 210px;
+        height: auto;
+        min-height: 210px;
+
     }
     a:hover>.mask {
         background: rgba(240,3,60, 0.8);
@@ -211,13 +216,10 @@ $fg-max-columns: 12;
     min-height: 35em;
     height: 29.66101694915254%;
     overflow: hidden;
-    figure div:first-child {
-        bottom: 0px;
-    }
+
     img {
-        width: auto;
-        height: 100%;
-        max-height: 210px;
+        height: auto;
+        min-height: 210px;
     }
     a:hover>.mask {
         background: rgba(0,36,69, 0.8);

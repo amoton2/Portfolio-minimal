@@ -50,6 +50,7 @@ $base-line-height: 6px;
 img{
 
 	height: auto;
+	max-width: 100%;
 }
 
 body{
@@ -307,6 +308,7 @@ a{
 	background: $white;
 	box-shadow: 0px 2px 6px 0px rgba( 0, 0, 0, 0.2);
 	z-index: 2;
+	position: relative;
 	@include display(flex);
 	@include flex-direction(row);
 	> figure {

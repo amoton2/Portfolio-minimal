@@ -43,7 +43,8 @@ table {
   color: #6a6a6a; }
 
 img {
-  height: auto; }
+  height: auto;
+  max-width: 100%; }
 
 body {
   font-size: 6px;
@@ -285,6 +286,7 @@ a {
   background: white;
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
   z-index: 2;
+  position: relative;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -616,6 +618,9 @@ a {
   min-height: 118em;
   height: 100%;
   overflow: hidden; }
+  .gmcvb h2 {
+    font-size: 11em;
+    line-height: 0.90em; }
   .gmcvb a:hover > .mask {
     background: rgba(1, 183, 193, 0.8); }
   .gmcvb img {
@@ -631,9 +636,9 @@ a {
   height: 31.3559322034%;
   overflow: hidden; }
   .bp img {
-    width: auto;
-    height: 100%;
-    max-height: 224px; }
+    height: auto;
+    min-width: 322px;
+    min-height: 224px; }
   .bp a:hover > .mask {
     background: rgba(200, 192, 182, 0.8); }
 
@@ -673,6 +678,7 @@ a {
   height: 59.32203389830508%;
   overflow: hidden; }
   .joingr img {
+    float: right;
     width: auto;
     height: 100%;
     max-height: 420px; }
@@ -686,9 +692,8 @@ a {
   height: 29.66101694915254%;
   overflow: hidden; }
   .fc img {
-    width: auto;
-    height: 100%;
-    max-height: 210px; }
+    height: auto;
+    min-height: 210px; }
   .fc a:hover > .mask {
     background: rgba(240, 3, 60, 0.8); }
 
@@ -698,11 +703,8 @@ a {
   min-height: 35em;
   height: 29.66101694915254%;
   overflow: hidden; }
-  .ac figure div:first-child {
-    bottom: 0px; }
   .ac img {
-    width: auto;
-    height: 100%;
-    max-height: 210px; }
+    height: auto;
+    min-height: 210px; }
   .ac a:hover > .mask {
     background: rgba(0, 36, 69, 0.8); }
