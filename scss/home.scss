@@ -42,11 +42,26 @@ $fg-max-columns: 12;
     figure {
         width: 100%;
         overflow: hidden;
-        @include transition(all 0.3s ease);
-        @include transform(scale 1);
+        @include transition(all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1));
+        @include transform(scale(1));
+        opacity: 1;
+
     }
     a:hover>figure {
-        @include transform(scale 1.25);
+        @include transform(scale(1.1));
+        opacity: .5;
+        -webkit-filter: blur(2px); 
+        -moz-filter: blur(32x); 
+        -o-filter: blur(2px); 
+        -ms-filter: blur(2px); 
+        filter: blur(2px);
+    }
+    a:hover .btn-home{
+        background: rgba(0,0,0, 0.3);
+    }
+    a:hover .btn-home:before{
+        left: 78%;
+        opacity: 1;
     }
     article{
         position: relative;
@@ -55,18 +70,17 @@ $fg-max-columns: 12;
             position: absolute;
             padding: 6em;
             height: 70%;
+            z-index: 1;
             @include display(flex);
             @include flex-direction(column);
             @include justify-content(flex-start);
-            z-index: 2;
             button{
                 margin-top: auto;
             }
         }
         figure{
-            z-index: 1;
+            z-index: 0;
         }
-        
     }
     .gmcvb {
         width: flex-grid(7);
@@ -80,6 +94,7 @@ $fg-max-columns: 12;
         width: flex-grid(5);
         .bp {
             width: flex-grid(5,5);
+            background: rgb(136,129,118);
             img {
                 max-width: 582px;
             }
@@ -112,6 +127,7 @@ $fg-max-columns: 12;
     }
     .fc {
         width: flex-grid(3);
+        background: rgb(135,136,138);
         img {
             max-width: 352px;
 
