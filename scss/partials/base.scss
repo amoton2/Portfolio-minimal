@@ -132,6 +132,9 @@ small{
 	font-size: 2em;
 	line-height: 1em;
 }
+// Icons
+
+@import "partials/icons";
 
 // Links and buttons
 a{
@@ -177,6 +180,12 @@ a{
 .btn-work:hover:after,
 .btn-work:active:after {
 	height: 100%;
+}
+.btn-home{
+	background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    padding: 1.125em * 4 2em;
+    text-align: center;
 }
 /*-- The start of the navigation for pages--*/
 

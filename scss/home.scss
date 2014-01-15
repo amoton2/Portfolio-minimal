@@ -3,17 +3,29 @@
 $fg-column: 117px;
 $fg-gutter: 0px;
 $fg-max-columns: 12;
-
-.main-content {
+.row{
     @include display(flex);
     @include flex-direction(row);
     @include justify-content(flex-start);
-    @include align-items(stretch);
+    width: 100%;
+}
+h1,h2{
+    font-weight: $ultra-light;
+}
+h1{
+    font-size: 14em;
+    margin-bottom: 0px;
+    line-height: .85em;
+}
+h2{
+    font-size: 9em;
+    line-height: .8888em;
+    margin-bottom: 0px;
+}
+.main-content {
     width: flex-grid(12);
     position: relative;
     overflow: hidden;
-    min-height: 118em;
-    height: 100%;
     img {
         width: 100%;
         overflow: hidden;
@@ -22,207 +34,131 @@ $fg-max-columns: 12;
         position: relative;
         overflow: hidden;
         @include transition(all 0.3s ease);
-        h5:first-child {
-            margin-bottom: 0;
-        }
-        div {
-            position: absolute;
-            padding: 8%;
-        }
+        @include transform(scale (1));
     }
     a:hover>figure {
-        -webkit-filter: blur(2px);
-        -moz-filter: blur(2px);
-        filter: blur(2px);
-        margin: -2px -2px 0 0;
+        @include transform(scale (1.25));
     }
-    a {
-        .mask {
-            position: absolute;
-            width: 100%;
+    
+    .gmcvb {
+        width: flex-grid(7);
+        background: rgb(0, 189, 200);
+        position: relative;
+        overflow: hidden;
+        h2{
+            font-size: 11em;
+            line-height: 0.90em;
+        }
+        a:hover>.mask {
+            background: rgba(1, 183, 193, 0.8);
+        }
+        img {
+            width: auto;
             height: 100%;
-            overflow: hidden;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            @include transition(all 0.2s ease-in);
-        }
-        .trans-btn {
-            position: absolute;
-            background: transparent;
-            border: 1px solid rgba(255, 255, 255, 0.9);
-            padding: 1.125em * 4 2em;
-            text-transform: uppercase;
-            text-align: center;
-            width: 50%;
-            margin: 0 auto;
-            opacity: 0;
-            top: 0;
-            left: 22%;
-            @include transition(all 0.3s ease-in-out 0.1s);
-            h5 {
-                color: $white;
-                letter-spacing: 2px;
-                margin-bottom: 0;
-            }
+            max-height: 708px;
+            float: right;
         }
     }
-    a:hover>.mask {
-        opacity: 1;
-        .trans-btn {
-            opacity: 1;
-            top: 37%;
+
+    .bp {
+        position: relative;
+        background: rgba(200, 200, 200, 0.6);
+        max-height: 37em;
+        height: 31.3559322034%;
+        overflow: hidden;
+        img {
+            height: auto;
+            min-width:322px;
+            min-height: 224px;
         }
-        .trans-btn:hover {
-            background: rgba(0, 0, 0, 0.4);
+        a:hover>.mask {
+            background: rgba(200, 192, 182, 0.8);
         }
     }
-}
 
-.col-lrg {
-    width: flex-grid(5);
-}
+    .usaa {
+        position: relative;
+        background: rgb(185, 211, 228);
+        min-height: 81em;
+        height: 68.64406779661016%;
+        overflow: hidden;
+        figure div:first-child {
+            bottom: 0px;
+        }
+        img {
+            width: auto;
+            height: 100%;
+            max-height: 486px;
+            float: right;
+        }
+        a:hover>.mask {
+            background: rgba(185, 211, 228, 0.8);
+        }
+    }
 
-.col-small {
-    width: flex-grid(3);
-}
+    .gmcvbmobile {
+        position: relative;
+        background: rgb(249, 192, 0);
+        min-height: 48em;
+        height: 40.67796610169492%;
+        overflow: hidden;
+        img {
+            width: auto;
+            height: 100%;
+            max-height: 288px;
+        }
+        a:hover>.mask {
+            background: rgba(249, 192, 0, 0.8);
+        }
+    }
 
-.col-med {
-    width: 33.5%;
-}
+    .joingr {
+        position: relative;
+        background: rgb(214, 25, 5);
+        min-height: 70em;
+        height: 59.32203389830508%;
+        overflow: hidden;
+        img {
+            float: right;
+            width: auto;
+            height: 100%;
+            max-height: 420px;
+        }
+        a:hover>.mask {
+            background: rgba(214, 25, 5, 0.8);
+        }
+    }
 
-.small {
-    width: flex-grid(6);
-}
+    .fc {
+    	position: relative;
+        background: rgba(200, 200, 200, 0.2);
+        min-height: 35em;
+        height: 29.66101694915254%;
+        overflow: hidden;
+        img {
+            height: auto;
+            min-height: 210px;
 
-.last {
-    @include display(flex);
-    @include flex-flow(row wrap);
-    .item {
-        @include display(flex);
-        @include flex-direction(column);
+        }
+        a:hover>.mask {
+            background: rgba(240,3,60, 0.8);
+        }
     }
-}
 
-.gmcvb {
-    background: rgb(0, 189, 200);
-    position: relative;
-    min-height: 118em;
-    height: 100%;
-    overflow: hidden;
-    h2{
-        font-size: 11em;
-        line-height: 0.90em;
-    }
-    a:hover>.mask {
-        background: rgba(1, 183, 193, 0.8);
-    }
-    img {
-        width: auto;
-        height: 100%;
-        max-height: 708px;
-        float: right;
-    }
-}
+    .ac {
+    	position: relative;
+        background: rgb(0,36,69);
+        min-height: 35em;
+        height: 29.66101694915254%;
+        overflow: hidden;
 
-.bp {
-    position: relative;
-    background: rgba(200, 200, 200, 0.6);
-    max-height: 37em;
-    height: 31.3559322034%;
-    overflow: hidden;
-    img {
-        height: auto;
-        min-width:322px;
-        min-height: 224px;
-    }
-    a:hover>.mask {
-        background: rgba(200, 192, 182, 0.8);
-    }
-}
-
-.usaa {
-    position: relative;
-    background: rgb(185, 211, 228);
-    min-height: 81em;
-    height: 68.64406779661016%;
-    overflow: hidden;
-    figure div:first-child {
-        bottom: 0px;
-    }
-    img {
-        width: auto;
-        height: 100%;
-        max-height: 486px;
-        float: right;
-    }
-    a:hover>.mask {
-        background: rgba(185, 211, 228, 0.8);
-    }
-}
-
-.gmcvbmobile {
-    position: relative;
-    background: rgb(249, 192, 0);
-    min-height: 48em;
-    height: 40.67796610169492%;
-    overflow: hidden;
-    img {
-        width: auto;
-        height: 100%;
-        max-height: 288px;
-    }
-    a:hover>.mask {
-        background: rgba(249, 192, 0, 0.8);
-    }
-}
-
-.joingr {
-    position: relative;
-    background: rgb(214, 25, 5);
-    min-height: 70em;
-    height: 59.32203389830508%;
-    overflow: hidden;
-    img {
-        float: right;
-        width: auto;
-        height: 100%;
-        max-height: 420px;
-    }
-    a:hover>.mask {
-        background: rgba(214, 25, 5, 0.8);
-    }
-}
-
-.fc {
-	position: relative;
-    background: rgba(200, 200, 200, 0.2);
-    min-height: 35em;
-    height: 29.66101694915254%;
-    overflow: hidden;
-    img {
-        height: auto;
-        min-height: 210px;
-
-    }
-    a:hover>.mask {
-        background: rgba(240,3,60, 0.8);
-    }
-}
-
-.ac {
-	position: relative;
-    background: rgb(0,36,69);
-    min-height: 35em;
-    height: 29.66101694915254%;
-    overflow: hidden;
-
-    img {
-        height: auto;
-        min-height: 210px;
-    }
-    a:hover>.mask {
-        background: rgba(0,36,69, 0.8);
+        img {
+            height: auto;
+            min-height: 210px;
+        }
+        a:hover>.mask {
+            background: rgba(0,36,69, 0.8);
+        }
     }
 }
 
@@ -230,7 +166,6 @@ $fg-max-columns: 12;
 
 
 }
-
 @media screen and (min-width: 0px) and (max-width: 459px) {
 
 
