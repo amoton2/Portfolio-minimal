@@ -748,3 +748,127 @@
 
 	}
 }
+.gmcvbmobile{
+	padding-bottom: 10em;
+	> header{
+		@include linear-gradient(0deg, rgb(229,146,0) -40%, rgb(249,192,0) 100%);
+		@include display(flex);
+		@include flex-direction(row);
+		@include justify-content(flex-start);
+		max-height: 123em;
+		article{
+			width: flex-grid(5);
+			padding-top: 10em;
+			position: relative;
+		}
+		figure{
+			width: flex-grid(8);
+			margin-left: -10%;
+			img{
+				float: left;
+				width: 179.22%;
+				max-width: 1346px;
+			}
+		}
+	}
+	.intro-copy{
+		padding: 25em 0 10em 0;
+
+		h2{
+			width: flex-grid(12);
+			text-align: center;
+			margin-bottom: 1em;
+		}
+		> div{
+			@include justify-content(center);			
+			.innerwrapper{
+				width: flex-grid(10);
+				@include display(flex);
+				@include flex-direction(row);
+				p{
+					width: flex-grid(5, 10);
+					margin-right: flex-gutter(10);
+				}
+			}
+		}
+	}
+	.homepage{
+		background: rgb(248,248,248);
+		padding-bottom: 12em;
+		header{
+			margin-top: 14em;
+			margin-bottom: 7em;
+			figure{
+				width: flex-grid(6);
+				margin-right: flex-gutter();
+				margin-top: -14em;
+				img{
+					width: 100%;
+					max-width: 497px;
+				}
+			}
+			article{
+				width: flex-grid(5);
+				padding-top: 20%;
+				p{
+					margin-top: 1.5em;
+				}
+			}
+		}
+		article{
+			figure{
+				width: flex-grid(12);
+				img{
+					float: left;
+					width: 111.05%;
+					max-width: 1266px;
+					margin-left: -6%;
+				}
+			}
+		}
+	}
+	.multi{
+		margin-top: 10em;
+		figure{
+			width: flex-grid(12);
+			img{
+				float: left;
+				width: 119.47%;
+				max-width: 1362px;
+				margin-left: -10%;
+			}
+		}
+	}
+	.multi:last-child{
+		figure{
+			@include display(flex);
+			@include justify-content(center);
+			img{
+				float: none;
+				width: 100%;
+				max-width: 925px;
+				margin: 0 auto;
+			}
+		}
+	}
+	.hand{
+		
+		background: url(../img/work-gmcvbmobile-phone4bg.jpg) no-repeat center center;
+		background-size: cover;
+		>div{
+			min-height: 50em;
+			max-height: 131em;
+			padding-top: 10%;
+			@include justify-content(flex-end);
+			@include flex-direction(column);
+		}
+		figure{
+			@include align-self(flex-end);
+			width: flex-grid(9);
+			img{
+				width: 100%;
+				max-width: 802px;
+			}
+		}
+	}
+}
