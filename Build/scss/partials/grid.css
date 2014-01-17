@@ -45,7 +45,10 @@ figure img {
   max-width: 100%; }
 
 .main-content {
-  overflow: hidden; }
+  overflow: hidden;
+  top: 10em;
+  margin-bottom: 10em;
+  position: relative; }
 
 /*--- Desktop ---*/
 @media screen and (min-width: 158em) {

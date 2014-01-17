@@ -128,10 +128,6 @@ $fg-max-columns: 12;
     .fc {
         width: flex-grid(3);
         background: rgb(135,136,138);
-        img {
-            max-width: 352px;
-
-        }
     }
     .joingr {
         width: flex-grid(6);

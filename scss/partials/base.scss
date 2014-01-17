@@ -12,9 +12,8 @@
 
 $white: rgb(255,255,255);
 $orange: rgb(246, 133, 31);
-.white {
-	color: $white;
-}
+.white { color: $white; }
+.orange{ color: $orange;}
 
 
 //---Greys
@@ -83,6 +82,7 @@ h1, h2, h3, h4, h5, h6, .gigantic{
 	font-weight: $ultra-thin;
 	font-size: 30em;
 	line-height: 0.83333333333em;
+	text-transform: uppercase;
 }
 h1, h2, h3{
 	font-weight: $light-con;
@@ -131,6 +131,10 @@ p{
 small{
 	font-size: 2em;
 	line-height: 1em;
+}
+.bold{
+	font-weight: bold;
+	color: $hl-grey;
 }
 // Icons
 
@@ -189,7 +193,7 @@ a{
     padding: 1.5em 3em;
     color: $white;
     text-align: center;
-    min-width: 16em;
+    min-width: 13em;
     max-width: 18em;
     border-radius: 3px;
 }
@@ -405,9 +409,56 @@ a{
 }
 .page-footer{
 	background: rgb(60,54,44);
-	min-height:17em;
-	padding-top: 7em;
+	margin-top:10em;
+	.row{
+		position: relative;
+		width: 90%;
+		max-width: 190em;
+		margin: 0 auto;
+	}
+	.social{
+		border-bottom: 1px solid rgb(70,64,53);
+		>div{
+			@include display(flex);
+			@include flex-direction(row);
+			@include justify-content(flex-start);
+			figure{
+				width: 33.357142857142854%;
+				padding: 6em 0;
+				border-right: 1px solid rgb(70,64,53);
+				display: block;
+				@include transition (all 0.2s ease-in-out);
+				@include display(flex);
+				@include justify-content(center);
+				img{
+					width: 6em;
+					opacity: .25;
+				}
+				
+			}
+			
+			figure:hover{
+				img{
+					opacity: 1;
+				}
+			}
+			figure:last-child{
+				border-right: none;
+			}
+		}
+		.twitter:hover {
+			background: rgb(85,172,238);
+		}
+		.linkedin:hover{
+			background: rgb(0,123,182);
+		}
+		.behance:hover{
+			background: rgb(0,92,255);
+		}
+	}
 	> div{
+		padding-top: 7em;
+		min-height:17em;
 		@include display(flex);
 		@include flex-direction(row);
 		@include justify-content(flex-start);

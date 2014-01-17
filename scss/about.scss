@@ -1,0 +1,25 @@
+@import "partials/base.scss";
+
+@import "partials/grid.scss";
+
+h1{
+	font-weight: $ultra-thin;
+	font-size: 40px;
+	text-align: center;
+	margin-bottom: .1666666666667em;
+}
+h2{
+	font-size: 11em;
+	text-align: center;
+	line-height: 1em;
+	margin-bottom: 0px;
+}
+//Page Styes
+.page-footer{
+	margin-top:0px;
+}
+figure img{
+	width: 100%;
+	max-width: 100%;
+}
+//about Styles

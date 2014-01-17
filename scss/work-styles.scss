@@ -18,10 +18,24 @@
 }
  
 
-
+.main-content{
+	> header{
+		h1{
+			font-weight: $ultra-light;
+			line-height: 0.88235294117em;
+			letter-spacing: 0;
+			text-transform: uppercase;
+		}
+	}
+}
 //Page Styes
-
-
+.page-footer{
+	margin-top:0px;
+}
+figure img{
+	width: 100%;
+	max-width: 100%;
+}
 
 .gmcvb{
 
@@ -119,6 +133,7 @@
 					float: left;
 					margin-left: -55%;
 					width: 182.71%;
+					max-width: 2083px;
 				}
 			}
 		}
@@ -343,7 +358,7 @@
 }
 .usaa{
 	> header{
-		background: rgb(185,211,228) url(../img/work-usaa-headbg.png) no-repeat top center;
+		background: rgb(146,183,208) url(../img/work-usaa-headbg.png) no-repeat top center;
 		@include display(flex);
 		@include flex-direction(row);
 		@include justify-content(flex-start);
