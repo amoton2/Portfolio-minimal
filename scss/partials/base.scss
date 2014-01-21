@@ -147,7 +147,7 @@ a{
 .btn{
 	border: none;
 	font-family: $univers;
-	font-size: 3em;
+	font-size: 2em;
 	color: $hl-grey;
 	background: transparent;
 	cursor: pointer;
@@ -155,7 +155,7 @@ a{
 	display: inline-block;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-weight: $ultra-con;
+	font-weight: $bold-con;
 	outline: none;
 	position: relative;
 	@include transition(all 0.3s);
@@ -195,7 +195,6 @@ a{
     text-align: center;
     min-width: 13em;
     max-width: 18em;
-    border-radius: 3px;
 }
 .btn-home:before{
 	position: absolute;

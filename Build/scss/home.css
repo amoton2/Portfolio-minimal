@@ -186,7 +186,7 @@ a {
 .btn {
   border: none;
   font-family: "Univers W01", sans-serif;
-  font-size: 3em;
+  font-size: 2em;
   color: #333333;
   background: transparent;
   cursor: pointer;
@@ -194,7 +194,7 @@ a {
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 300;
+  font-weight: 700;
   outline: none;
   position: relative;
   -webkit-transition: all 0.3s;
@@ -237,8 +237,7 @@ a {
   color: white;
   text-align: center;
   min-width: 13em;
-  max-width: 18em;
-  border-radius: 3px; }
+  max-width: 18em; }
 
 .btn-home:before {
   position: absolute;

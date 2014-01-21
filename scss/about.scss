@@ -2,18 +2,7 @@
 
 @import "partials/grid.scss";
 
-h1{
-	font-weight: $ultra-thin;
-	font-size: 40px;
-	text-align: center;
-	margin-bottom: .1666666666667em;
-}
-h2{
-	font-size: 11em;
-	text-align: center;
-	line-height: 1em;
-	margin-bottom: 0px;
-}
+
 //Page Styes
 .page-footer{
 	margin-top:0px;
@@ -22,4 +11,238 @@ figure img{
 	width: 100%;
 	max-width: 100%;
 }
+.line{
+	border-bottom:1px solid rgb(235,235,235);	
+}
+.diamond-narrow{
+	width: 8em;
+	height: 12em;
+	background-repeat: no-repeat;
+	background-position: left top;
+	margin: 15em auto -6em; 
+	h4{
+		text-align: center;
+		line-height: 2.95em;
+	}
+}
+.diamond-white{
+	background-image: url(../img/icn-diamond-white.svg);
+}
+.diamond-orange{
+	background-image: url(../img/icn-diamond-orange.svg);
+}
+.innerwrapper{
+	width: flex-grid(10);
+	@include display(flex);
+	@include flex-direction(row);
+	margin: 0 auto;
+}
 //about Styles
+.about{
+	.intro{
+		@include justify-content(center);
+		@include flex-direction(column);
+		padding-bottom: 15em;
+		.innerwrapper{
+			@include flex-direction(column);
+			header{
+				width: flex-grid(10,10);
+				text-align: center;
+				h1{
+					font-weight: $ultra-thin;
+					font-size: 40em;
+					letter-spacing: 0px;
+					text-transform: uppercase;
+					margin-bottom: 0.1666666666667em;
+					margin-top: 0.1666666666667em*2.5;
+				}
+				h2{
+					font-size: 11em;
+					line-height: 1em;
+					margin-bottom: 0px;
+				}	
+			}
+			article{
+				width: flex-grid(10,10);
+			}
+			.bc{
+				width: flex-grid(10,10);
+				margin-top: 20em;
+				p{
+					font-size: 3em;
+					line-height: 1.66666666667em;
+					margin-bottom: 1.66666666667em;
+					padding-right: 9em;
+				}
+				figure{
+					float: right;
+					width: flex-grid(6,10);
+					margin: 0 -7.46614% 4em 4em;
+
+				}
+			}
+		}
+	}
+	.experience{
+		padding: 15em 0;
+		background: $orange;
+		> header{
+			@include justify-content(center);
+			.innerwrapper{
+				@include flex-direction(column);
+				h1{
+					font-size: 9em;
+					line-height: 1em;
+					text-align: center;
+					margin-bottom: 0px;
+					letter-spacing: -1px;
+				}
+				.line{
+					border-bottom-color: rgb(244,163,89);
+					.diamond-white h4{
+						color: $bc-grey;
+					}
+				}
+			}
+		}
+		.resume{
+			margin-top: 20em;
+			article{
+				width: flex-grid(6);
+				margin-right: flex-gutter();
+				@include display(flex);
+				@include flex-direction(row);
+				@include justify-content(flex-start);
+				header{
+					width: flex-grid(3,6);
+					margin-right: flex-gutter(6);
+					.numbers{
+						text-align:	right;
+						margin-bottom: 0px;
+						.dash{
+							top: -3em;
+						}
+					}
+				}
+				div{
+					width: flex-grid(3,6);
+					h5{
+						margin-bottom: 0px;
+					}
+					h3{
+						margin-bottom: 0.8em;
+					}
+					small{
+						font-weight: $bold-con;
+					}
+					p{
+						margin-top: 1.5em;
+					}
+				}
+			}
+		}
+		footer{
+			margin-top: 14em;
+			> div{
+				@include justify-content(center);
+				.btn-work{
+					border-color: rgba(255, 255, 255, .25);
+					color: $white;
+				}
+				.btn-work:after{
+					background: $white;
+				}
+				.btn-work:hover,
+				.btn-work:active{
+					color: $bc-grey;
+				}
+			}
+		}
+	}
+	.recomendation{
+		padding: 15em 0;
+		> header{
+			margin-bottom: 17em;
+			@include justify-content(center);
+			.innerwrapper{
+				@include flex-direction(column);
+				h1{
+					font-size: 9em;
+					line-height: 1em;
+					text-align: center;
+					margin-bottom: 0px;
+					letter-spacing: -1px;
+				}
+			}
+		}
+		.innerwrapper{
+			@include flex-direction(column);
+		}
+		.quote{
+			blockquote{
+				position: relative;
+				h3{
+				color: $bc-grey;
+				line-height: 1.2em;
+					&:before,
+					&:after{
+					content: '\201C';
+					color: $orange;
+					font-size: 2em;
+					position: relative;
+					font-family: $univers;
+					}
+					&:before{
+						top: 0.25em;
+					}
+					&:after{
+						content: '\201D';
+						bottom: -0.5em;
+						line-height: 0em;
+					}
+				}
+			}
+			.by-line{
+				@include display(flex);
+				@include flex-direction(row);
+				@include justify-content(flex-start);
+				margin-top: 6em;
+				.by-thumb{
+					width: 13em;
+					border-radius: 50%;
+					border: 4px solid rgb(207,200,191);
+					img{
+						border-radius: 50%;
+					}
+				}
+				.by-name{
+					margin-left: 4em;
+					padding-top: 3em;
+					p{
+						margin-bottom: 0px;
+					}	
+				}
+				
+			}	
+		}
+		.quote-top{
+			width: flex-grid(10,10);
+			margin-bottom: 9em;
+		}
+		.quote-bottom{
+			@include display(flex);
+			@include flex-direction(row);
+			@include justify-content(flex-start);
+			.quote{
+				width: flex-grid(5,10);
+				margin-right: flex-gutter(10);
+			}
+		}
+	}
+	footer{
+		margin-top: 14em;
+			> div{
+				@include justify-content(center);
+		}
+	}
+}

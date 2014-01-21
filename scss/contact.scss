@@ -1,0 +1,61 @@
+@import "partials/base.scss";
+
+@import "partials/grid.scss";
+
+.contact{
+	@include display(flex);
+	@include flex-direction(column);
+	header{
+		background: rgb(246,133,31);
+		padding:16em 0;
+		>div{
+			@include flex-direction(column);
+		}
+		h3{
+			width: flex-grid(12);
+			font-weight: $ultra-con;
+			text-transform: uppercase;
+			letter-spacing: 0px;
+			margin-bottom: 1em;
+		}
+		h1{
+			width: flex-grid(12);
+			margin-bottom: .5em;
+		}
+	}
+	.contact-info{
+		background: rgb(246,245,243);
+		margin-top: 11em;
+		margin-bottom: 11em;
+		padding: 10em 0;
+		article{
+			width: flex-grid(6);
+			margin-right: flex-gutter();
+			padding: 9em 0;
+			text-align: center;
+			text-transform: uppercase;
+			&:last-child{
+				border-left: 1px solid rgb(196,196,196);
+			}
+			h4{
+				color: rgb(163,157,149);
+				font-weight: $ultra-con;
+				margin-bottom: 1.25em;
+			}
+			h1{
+				font-weight: $ultra-light;
+				color: rgb(137,137,137);
+				letter-spacing: 0px;
+				margin-bottom: 0;
+
+				a{
+					color: inherit;
+					&:hover{
+						color: #c3c1bd;
+					}
+				}
+			}
+		}
+
+	}
+}
