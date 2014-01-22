@@ -887,3 +887,57 @@ figure img{
 		}
 	}
 }
+@media only screen and (max-width:1023px){
+	.main-content{
+		> header{
+			h1{
+				font-size: 10em;
+				margin-bottom: 0px;
+				text-shadow: 0 1px 0 rgba(0,0,0,.25);
+			}
+			.credits{
+				margin-top: 3em;
+				-webkit-column-count: 2;
+				-webkit-column-gap: 20px;
+				column-count: 2;
+				column-gap: 20px;
+
+			}
+		}
+	}
+	.gmcvb, 
+	.joingr,
+	.gmcvbmobile{
+		> header{
+			overflow: hidden;
+			min-height: 100em;
+			> div{
+				@include flex-direction(column);
+				article{
+					position: absolute;
+					width: 100%;
+					bottom: 0px;
+					padding-bottom: 6em;
+				}
+				figure{
+					width: flex-grid(12);
+					margin-left: 0px;
+					margin-top: -20em;
+					img{
+						float: none;
+						width: 200%;
+					}
+				}
+			}
+		}
+	}
+	.gmcvbmobile{
+		> header{
+			figure{
+				img{
+					max-width: 880px;
+				}
+			}
+		}
+	}
+}

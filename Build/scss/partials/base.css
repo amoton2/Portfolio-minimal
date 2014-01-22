@@ -626,6 +626,7 @@ a {
     padding: 2em 1.15em; }
 
   .page-footer > div {
+    padding-top: 0;
     -webkit-box-orient: vertical;
     -moz-box-orient: vertical;
     box-orient: vertical;
@@ -655,7 +656,8 @@ a {
       -webkit-align-self: center;
       -moz-align-self: center;
       align-self: center;
-      -ms-flex-item-align: center; }
+      -ms-flex-item-align: center;
+      margin-bottom: 1em; }
     .page-footer > div small {
       text-align: center;
       margin-left: 0; } }

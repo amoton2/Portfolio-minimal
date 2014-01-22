@@ -207,6 +207,8 @@ a{
 	color: $white;
 	@include transition(all 0.3s);
 }
+
+
 /*-- The start of the navigation for pages--*/
 
 /* Modal effect */
@@ -490,11 +492,13 @@ a{
 	}	
 	.page-footer{
 		>div{
+			padding-top:0;
 			@include flex-direction(column);
 			@include justify-content(center);
 			@include align-items(center);
 			figure{
 				@include align-self(center);
+				margin-bottom: 1em;
 			}
 			small{
 				text-align: center;
