@@ -120,7 +120,7 @@ h6{
 	font-weight: $bold-con;
 	font-size: 2em;
 	line-height: 1em;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 	margin-bottom: 1em;
 }
 p{
@@ -190,7 +190,7 @@ a{
 .btn-home{
 	background: rgba(0,0,0, 0.1);
     border: 1px solid rgba(255, 255, 255, .6);
-    padding: 1.5em 3em;
+    padding: 1em 3em;
     color: $white;
     text-align: center;
     min-width: 13em;
@@ -200,7 +200,7 @@ a{
 	position: absolute;
 	height: 100%;
 	font-size: 250%;
-	line-height: 1.75;
+	line-height: 1.35;
 	left:70%;
 	opacity: 0;
 	top:0;
@@ -365,35 +365,30 @@ a{
 		height: 100%;
 		
 		ul{
-			
 			@include display(flex);
 			@include flex-direction(row);
 			@include align-items(center);
-			@include justify-content(space-between);
 			height: 100%;
-			width: 56em;
-			
 			li{	
 				
 				height: 100%;
-				width: 18em;
 				border-left: 1px solid $line-grey;
 				text-transform: uppercase;
 				a{
-					width: 18em;
-					height: 100%;
 					h6{
 						color: rgb(125, 125, 125);
 						text-align: center;
-						padding: 2em 0;
+						padding: 2em 4em;
 						@include transition (all 0.2s ease-in-out);
+						margin-bottom: 0px;
 						}
-					
-					
-				}
-				a:hover h6,
-				a:focus h6{
-					color: $orange;
+					&:hover h6{
+						color: $orange;
+					}
+					&:active h6{
+						background: rgb( 239, 239, 239);
+						box-shadow: inset 3px 0 1px 0 #e3e3e3;
+					}
 				}				
 			}
 		}
@@ -483,4 +478,28 @@ a{
 }
 .main-content{
 	top:10em;
+}
+@media screen and (min-width: 641px) and (max-width: 839px) {
+
+
+}
+@media screen and (min-width: 0px) and (max-width: 640px) {
+	/* Navigation for mobile */
+	.main-nav nav ul li a h6{
+		padding: 2em 1.15em;
+	}	
+	.page-footer{
+		>div{
+			@include flex-direction(column);
+			@include justify-content(center);
+			@include align-items(center);
+			figure{
+				@include align-self(center);
+			}
+			small{
+				text-align: center;
+				margin-left: 0;
+			}
+		}
+	}	
 }

@@ -115,7 +115,7 @@ h6 {
   font-weight: 700;
   font-size: 2em;
   line-height: 1em;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin-bottom: 1em; }
 
 p {
@@ -233,7 +233,7 @@ a {
 .btn-home {
   background: rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.6);
-  padding: 1.5em 3em;
+  padding: 1em 3em;
   color: white;
   text-align: center;
   min-width: 13em;
@@ -243,7 +243,7 @@ a {
   position: absolute;
   height: 100%;
   font-size: 250%;
-  line-height: 1.75;
+  line-height: 1.35;
   left: 70%;
   opacity: 0;
   top: 0;
@@ -458,35 +458,24 @@ a {
       -o-align-items: center;
       align-items: center;
       -ms-flex-align: center;
-      -webkit-box-pack: justify;
-      -moz-box-pack: justify;
-      box-pack: justify;
-      -webkit-justify-content: space-between;
-      -moz-justify-content: space-between;
-      -ms-justify-content: space-between;
-      -o-justify-content: space-between;
-      justify-content: space-between;
-      -ms-flex-pack: justify;
-      height: 100%;
-      width: 56em; }
+      height: 100%; }
       .main-nav nav ul li {
         height: 100%;
-        width: 18em;
         border-left: 1px solid #ebebeb;
         text-transform: uppercase; }
-        .main-nav nav ul li a {
-          width: 18em;
-          height: 100%; }
-          .main-nav nav ul li a h6 {
-            color: #7d7d7d;
-            text-align: center;
-            padding: 2em 0;
-            -webkit-transition: all 0.2s ease-in-out;
-            -moz-transition: all 0.2s ease-in-out;
-            transition: all 0.2s ease-in-out; }
-        .main-nav nav ul li a:hover h6,
-        .main-nav nav ul li a:focus h6 {
+        .main-nav nav ul li a h6 {
+          color: #7d7d7d;
+          text-align: center;
+          padding: 2em 4em;
+          -webkit-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+          margin-bottom: 0px; }
+        .main-nav nav ul li a:hover h6 {
           color: #f6851f; }
+        .main-nav nav ul li a:active h6 {
+          background: #efefef;
+          box-shadow: inset 3px 0 1px 0 #e3e3e3; }
 
 .subnav {
   display: -webkit-box;
@@ -631,6 +620,45 @@ a {
 .main-content {
   top: 10em; }
 
+@media screen and (min-width: 0px) and (max-width: 640px) {
+  /* Navigation for mobile */
+  .main-nav nav ul li a h6 {
+    padding: 2em 1.15em; }
+
+  .page-footer > div {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center; }
+    .page-footer > div figure {
+      -webkit-align-self: center;
+      -moz-align-self: center;
+      align-self: center;
+      -ms-flex-item-align: center; }
+    .page-footer > div small {
+      text-align: center;
+      margin-left: 0; } }
 .row {
   display: -webkit-box;
   display: -moz-box;
