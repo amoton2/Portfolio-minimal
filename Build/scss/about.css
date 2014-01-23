@@ -1053,3 +1053,58 @@ figure img {
     -o-justify-content: center;
     justify-content: center;
     -ms-flex-pack: center; }
+
+@media only screen and (max-width: 1023px) {
+  .numbers {
+    font-size: 23em !important; }
+
+  .about .experience > header {
+    margin-bottom: 16em; }
+  .about .experience .resume {
+    -webkit-box-orient: column !important;
+    -moz-box-orient: column !important;
+    box-orient: column !important;
+    -webkit-flex-direction: column !important;
+    -moz-flex-direction: column !important;
+    flex-direction: column !important;
+    -ms-flex-direction: column !important;
+    margin-top: 4em; }
+    .about .experience .resume article {
+      width: 100%;
+      margin-bottom: 4em; }
+      .about .experience .resume article header {
+        width: 40.4386%; }
+      .about .experience .resume article div {
+        width: 57.45614%; } }
+@media only screen and (max-width: 721px) {
+  .numbers {
+    font-size: 22em !important;
+    letter-spacing: 0px; }
+
+  .about .intro header h1 {
+    font-size: 20em !important; }
+  .about .intro header h2 {
+    font-size: 6em !important; }
+  .about .intro .bc p {
+    padding-right: 0px !important; }
+  .about .intro .bc figure {
+    width: 100% !important;
+    float: none !important;
+    margin: 0 0 6em 0 !important; }
+  .about * header .innerwrapper h1 {
+    font-size: 6em !important; }
+  .about .recomendation .quote .by-line .by-thumb {
+    width: 20em;
+    height: 20em; }
+  .about .recomendation .quote-bottom {
+    -webkit-box-orient: column !important;
+    -moz-box-orient: column !important;
+    box-orient: column !important;
+    -webkit-flex-direction: column !important;
+    -moz-flex-direction: column !important;
+    flex-direction: column !important;
+    -ms-flex-direction: column !important; }
+    .about .recomendation .quote-bottom .quote {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 9em; } }

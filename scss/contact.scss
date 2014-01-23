@@ -47,6 +47,7 @@
 				color: rgb(137,137,137);
 				letter-spacing: 0px;
 				margin-bottom: 0;
+				font-size: 13em;
 
 				a{
 					color: inherit;
@@ -58,4 +59,40 @@
 		}
 
 	}
+}
+@media only screen and (max-width:1023px){
+	.contact{
+		.contact-info{
+			article{
+				h1{
+					font-size: 11em;
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width:721px){
+	.contact{
+		header{
+			text-align: center;
+			h1{
+				font-size: 8em;
+				letter-spacing: -1px;
+			}
+		}
+		.contact-info{
+			@include flex-direction(column);
+			article{
+				width: flex-grid(12);
+				&:last-child{
+					border-left: none;
+					border-top: 1px solid rgb(196,196,196); 
+				}
+				h1{
+					font-size: 8em;
+				}
+			}
+		}
+	}
+
 }

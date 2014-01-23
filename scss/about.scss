@@ -246,3 +246,78 @@ figure img{
 		}
 	}
 }
+@media only screen and (max-width:1023px){
+	.numbers{
+		font-size: 23em !important;
+	}
+	.about{
+		.experience{
+			>header{
+				margin-bottom: 16em;
+			}
+			.resume{
+				@include flex-direction(column !important);
+				margin-top: 4em;
+				article{
+					width: flex-grid(12);
+					margin-bottom: 4em;
+					header{
+						width: flex-grid(5,12);
+					}
+					div{
+						width: flex-grid(7,12);
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width:721px){
+	.numbers{
+		font-size: 22em !important;
+		letter-spacing: 0px;
+	}
+	.about{
+		.intro{
+			header{
+				h1{
+					font-size: 20em !important;
+				}
+				h2{
+					font-size: 6em !important;
+				}
+			}
+			.bc{
+				p{
+					padding-right: 0px !important;
+				}
+				figure{
+					width: flex-grid(10,10) !important;
+					float: none !important;
+					margin: 0 0 6em 0 !important;
+				}
+			}
+		}
+		* header .innerwrapper h1{
+			font-size: 6em !important;
+		}
+		.recomendation{
+			.quote{
+				.by-line{
+					.by-thumb{
+						width: 20em;
+						height: 20em;
+					}
+				}
+			}
+			.quote-bottom{
+				@include flex-direction(column !important);
+				.quote{
+					width: flex-grid(10,10);
+					margin-right: 0;
+					margin-bottom: 9em;
+				}
+			}
+		}	
+	}
+}
