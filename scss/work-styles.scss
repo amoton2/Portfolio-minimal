@@ -362,7 +362,7 @@ figure img{
 }
 .usaa{
 	> header{
-		background: rgb(146,183,208) url(../img/work-usaa-headbg.png) no-repeat top center;
+		background: rgb(140,185,214) url(../img/work-usaa-headbg.png) no-repeat top center;
 		@include display(flex);
 		@include flex-direction(row);
 		@include justify-content(flex-start);
@@ -409,6 +409,7 @@ figure img{
 			padding-top: 3em;
 			text-transform: uppercase;
 			text-align: center;
+			position: relative;
 			h1{
 				margin-bottom: 0px;
 				color: $lt-grey;
@@ -744,7 +745,7 @@ figure img{
 		header{
 			width:flex-grid(12);
 			margin-top: -17em;
-			z-index: 2;
+			z-index: 1;
 		}
 		article{
 			width: flex-grid(8);
@@ -901,6 +902,7 @@ figure img{
 				text-shadow: 0 1px 0 rgba(0,0,0,.25);
 			}
 			.credits{
+				width: flex-grid(6);
 				margin-top: 3em;
 				-webkit-column-count: 2;
 				-webkit-column-gap: 20px;
@@ -915,10 +917,15 @@ figure img{
 	}
 	.gmcvb, 
 	.joingr,
-	.gmcvbmobile{
+	.gmcvbmobile, 
+	.usaa,
+	.bp,
+	.facecard,
+	.ac {
 		> header{
 			overflow: hidden;
-			min-height: 100em;
+			max-height: 100em;
+			min-height: 99em;
 			> div{
 				@include flex-direction(column);
 				article{
@@ -1025,8 +1032,59 @@ figure img{
 			}
 		}
 	}
+	.usaa{
+		> header{
+			background-size: cover;
+			figure{
+				margin-top: 0 !important;
+				img{
+					margin-left: 20%;
+					max-width: 600px;
+				}
+			}
+		}
+	}
+	.bp{
+		.type-color{
+			.top{
+				@include flex-direction(column !important);
+				.type{
+					width: flex-grid(10,10)!important;
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	.facecard{
+		> header{
+			figure{
+				margin-top: 0px !important;
+				img{
+					width: 380% !important;
+					margin-left: -20%;
+				}
+			}
+		}
+	}
+	.ac{
+		> header{
+			background-size: cover;
+			figure{
+				margin-top: 0 !important;
+			}
+		}
+	}
 }
 @media only screen and (max-width:721px){
+	.credits{
+		width: 100% !important;
+	}
+	.intro-copy{
+		h2{
+			font-size: 5em !important;
+			letter-spacing: 0px !important;
+		}
+	}
 	.gmcvb{
 		.centerhead{
 			@include flex-direction(column);
@@ -1070,6 +1128,115 @@ figure img{
 					img{
 						margin-left: 0;
 					}
+				}
+			}
+		}
+	}
+	.usaa{
+		> header{
+			figure{
+				margin-top: -8em !important;
+				img{
+					margin-left: 10%;
+				}
+			}
+		}
+		.concept{
+			> div{
+				@include flex-direction(column);
+				article{
+					width: flex-grid(4);
+				}
+				figure{
+					margin-top: -6em;
+					img{
+						width: 335.52%;
+						margin-left: -62%;
+					}
+				}
+			}
+		}
+		.sitedesign{
+			header{
+				@include flex-direction(column);
+				article{
+					width: flex-grid(4);
+				}
+				figure{
+					width: flex-grid(12);
+					margin-top: 6em;
+				}
+			}
+		}
+	}
+	.bp{
+		> header{
+			> div{
+				figure{
+					margin-top: 0;
+					img{
+						width: 400% !important;
+						margin-left: -80%;
+					}
+				}
+			}
+		}
+		.stationary{
+			header{
+				h2{
+					margin-bottom: .5em !important;
+				}
+			}
+			figure{
+				img{
+					width: 228.42%;
+					margin-left: -30%;
+				}
+			}
+		}
+		.site-design{
+			header{
+				margin-top: -7em;
+			}
+			article{
+				width: flex-grid(10);
+			}
+		}
+	}
+	.facecard{
+		.stationary{
+			> div{
+				.innerwrapper{
+					@include flex-direction(column !important);
+					width: flex-grid(12);
+					div, figure{
+						width: flex-grid(12,12) !important;
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+	.ac{
+		> header{
+			figure{
+				img{
+					width: 300% !important;
+				}
+			}
+		}
+		.microsite{
+			header{
+				@include flex-direction(column !important);
+				article{
+					width: flex-grid(4);
+					margin-right: 0;
+					padding-top: 0;
+					margin-bottom: 10em;
+				}
+				figure{
+					width: flex-grid(12);
+					margin-left: 0;
 				}
 			}
 		}
