@@ -106,7 +106,6 @@ figure img{
 	}
 	.sitedesign{
 		header{
-			height: 125em;
 			min-height: 70em;
 			width: 100%;
 			background: rgb(19,60,75);
@@ -129,6 +128,7 @@ figure img{
 				width: flex-grid(12);
 				margin-right: -100%;
 				margin-top: 26em;
+				margin-bottom: -6em;
 				img{
 					float: left;
 					margin-left: -55%;
@@ -230,7 +230,7 @@ figure img{
 			@include flex-direction(row);
 			@include align-items(center);
 			figure{
-			width: flex-grid(4);
+				width: flex-grid(4);
 			}
 		}
 	}
@@ -250,6 +250,7 @@ figure img{
 		}
 		figure{
 			width: flex-grid(9);
+			margin-bottom: -2em;
 			margin-left: -17.105263157894736%;
 			img{
 				float: left;
@@ -341,13 +342,16 @@ figure img{
 		> figure {
 			background: url(../img/work-joingr-responsivebg.jpg) no-repeat center center;
 			background-size: cover;
-			min-height: 46em;
+			min-height: 26em;
 			max-height: 82em;
 			width: 100%;
 			margin-bottom: 12%;
 			> div{
 				padding: 6em 0 0 0;
 				overflow-y: visible;
+				img{
+					margin-bottom: -10%;
+				}
 
 			}
 		}
@@ -888,6 +892,7 @@ figure img{
 	}
 }
 @media only screen and (max-width:1023px){
+
 	.main-content{
 		> header{
 			h1{
@@ -903,6 +908,9 @@ figure img{
 				column-gap: 20px;
 
 			}
+		}
+		.gigantic{
+			font-size: 25em;
 		}
 	}
 	.gmcvb, 
@@ -928,6 +936,70 @@ figure img{
 						width: 200%;
 					}
 				}
+			}	
+		}
+		.intro-copy{
+			padding: 10em 0;
+			> div{
+				.innerwrapper{
+					@include flex-direction(column);
+					p{
+						width: flex-grid(10,10);
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+	.gmcvb{
+		.mood{
+			> .row{
+			@include flex-direction(column);
+			}
+			figure{
+				width: flex-grid(12);
+				margin-right: 0px;
+			}
+			article{
+				width: flex-grid(10);
+				padding-top: 0px;
+				margin: 0 auto 6em;
+			}
+		}
+		.sitedesign{
+			header{
+				> div{
+					@include flex-direction(column);
+					article{
+						width: flex-grid(12);
+						h1,h4{
+							text-align: left;
+						}
+					}
+					figure{
+						width: flex-grid(12);
+						margin-right: 0px;
+						margin-top: 0px;
+						img{
+							width: 200%;
+							margin-left: -50%;
+						}
+					}
+				}
+			}
+		}
+		.icons{
+			> div:last-child{
+				@include flex-direction(column);
+				@include align-items(center);
+				figure{
+					width: flex-grid(10);
+					img{
+						max-width: 67em;
+						margin: 0 auto;
+						display: block;
+					}
+				}
 			}
 		}
 	}
@@ -936,7 +1008,68 @@ figure img{
 			figure{
 				margin-top: -8em;
 				img{
-					max-width: 880px;
+					min-width: 800px;
+					max-width: 850px;
+				}
+			}
+		}
+	}
+	.joingr{
+		> header{
+			figure{
+
+				img{
+					margin-left: 10%;
+					max-width: 640px;
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width:721px){
+	.gmcvb{
+		.centerhead{
+			@include flex-direction(column);
+			width: flex-grid(10);
+
+			div{
+				width: flex-grid(10,10);
+				margin-right: 0px;
+			}
+			p{
+				width: flex-grid(10,10);
+			}
+		}
+	}
+	.gmcvbmobile{
+		.homepage{
+			header{
+				@include flex-direction(column);
+				@include align-items(center);
+				figure{
+					width: flex-grid(6);
+					margin-right: 0;
+				}
+				article{
+					width: flex-grid(10);
+					padding-top: 2em;
+				}
+			}
+		}
+	}
+	.joingr{
+		.wires{
+			> div{
+				@include flex-direction(column);
+				article{
+					padding-top: 0px;
+					padding-bottom: 6em;
+				}
+				figure{
+					width: flex-grid(12);
+					img{
+						margin-left: 0;
+					}
 				}
 			}
 		}
