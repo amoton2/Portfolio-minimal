@@ -252,114 +252,6 @@ a {
   -moz-transition: all 0.3s;
   transition: all 0.3s; }
 
-/*-- The start of the navigation for pages--*/
-/* Modal effect */
-.md-perspective {
-  height: 100%;
-  overflow: hidden; }
-  .md-perspective body {
-    height: 100%;
-    overflow: hidden;
-    background: #222;
-    -webkit-perspective: 600px;
-    -moz-perspective: 600px;
-    perspective: 600px; }
-
-.md-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 90%;
-  max-width: 1140px;
-  min-width: 320px;
-  height: auto;
-  z-index: 2000;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  /* visibility: hidden;
-   -webkit-backface-visibility: hidden;
-   -moz-backface-visibility: hidden;
-   backface-visibility: hidden;
-   */
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  /*-webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);*/ }
-
-.md-show {
-  visibility: visible; }
-
-.md-overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  opacity: 0;
-  background: rgba(128, 67, 11, 0.9);
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-  /*  -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;*/ }
-
-.md-show ~ .md-overlay {
-  opacity: 1;
-  visibility: visible; }
-
-/* Content styles */
-.md-content {
-  color: #fff;
-  background: #f6851f;
-  position: relative;
-  padding: 20em 16em;
-  overflow: auto;
-  margin: 0 auto; }
-  .md-content button {
-    position: absolute;
-    background: transparent;
-    float: right;
-    padding: 1em;
-    border: 2px solid white;
-    border-radius: 50%; }
-  .md-content header, .md-content article {
-    width: 50%;
-    float: left; }
-
-.md-show.md-effect-16 ~ .md-overlay {
-  background: rgba(171, 101, 38, 0.5); }
-.md-show.md-effect-16 ~ .container {
-  -webkit-filter: blur(3px);
-  -moz-filter: blur(3px);
-  filter: blur(3px); }
-
-.md-effect-16 .md-content {
-  -webkit-transform: translateY(-5%);
-  -moz-transform: translateY(-5%);
-  -ms-transform: translateY(-5%);
-  transform: translateY(-5%);
-  opacity: 0; }
-
-.md-show.md-effect-16 ~ .container, .md-effect-16 .md-content {
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s; }
-
-.md-show.md-effect-16 .md-content {
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-  opacity: 1; }
-
 /* navigation styles */
 .main-nav {
   width: 100%;
@@ -383,42 +275,6 @@ a {
   flex-direction: row;
   -ms-flex-direction: row; }
   .main-nav > figure {
-    -webkit-align-self: flex-start;
-    -moz-align-self: flex-start;
-    align-self: flex-start;
-    -ms-flex-item-align: start;
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -moz-box-orient: horizontal;
-    box-orient: horizontal;
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-direction: row;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    box-align: center;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    -o-align-items: center;
-    align-items: center;
-    -ms-flex-align: center;
-    -webkit-box-pack: center;
-    -moz-box-pack: center;
-    box-pack: center;
-    -webkit-justify-content: center;
-    -moz-justify-content: center;
-    -ms-justify-content: center;
-    -o-justify-content: center;
-    justify-content: center;
-    -ms-flex-pack: center;
     width: 15em;
     height: 100%;
     background-color: #f6851f;
@@ -426,6 +282,45 @@ a {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out; }
+    .main-nav > figure a {
+      -webkit-align-self: flex-start;
+      -moz-align-self: flex-start;
+      align-self: flex-start;
+      -ms-flex-item-align: start;
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -moz-box-orient: horizontal;
+      box-orient: horizontal;
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      flex-direction: row;
+      -ms-flex-direction: row;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      box-align: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -o-align-items: center;
+      align-items: center;
+      -ms-flex-align: center;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      box-pack: center;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      -ms-justify-content: center;
+      -o-justify-content: center;
+      justify-content: center;
+      -ms-flex-pack: center;
+      width: 100%;
+      height: 100%; }
     .main-nav > figure img {
       width: 8.333em; }
   .main-nav figure:hover {
@@ -540,7 +435,6 @@ a {
       -ms-flex-pack: start; }
       .page-footer .social > div figure {
         width: 33.357142857142854%;
-        padding: 6em 0;
         border-right: 1px solid #464035;
         display: block;
         -webkit-transition: all 0.2s ease-in-out;
@@ -562,6 +456,12 @@ a {
         -o-justify-content: center;
         justify-content: center;
         -ms-flex-pack: center; }
+        .page-footer .social > div figure a {
+          display: block;
+          padding: 6em 0;
+          text-align: center;
+          width: 100%;
+          height: 100%; }
         .page-footer .social > div figure img {
           width: 6em;
           opacity: .25; }

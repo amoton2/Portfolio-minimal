@@ -209,6 +209,10 @@ figure img{
 			@include flex-direction(row);
 			@include justify-content(center);
 		}
+		.videowrapper{
+			width: flex-grid(12);
+			margin-bottom: 1em;
+		}
 		> div figure{
 			width: flex-grid(12);
 		}
@@ -319,6 +323,10 @@ figure img{
 			h4{
 				text-align: center;
 			}
+		}
+		.videowrapper{
+			width: flex-grid(12);
+			margin-bottom: 2em;
 		}
 		> figure{
 			width: flex-grid(12);

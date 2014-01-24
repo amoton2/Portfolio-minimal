@@ -209,127 +209,6 @@ a{
 }
 
 
-/*-- The start of the navigation for pages--*/
-
-/* Modal effect */
-.md-perspective {
-  height: 100%;
-  overflow: hidden;
-  body {
-    height: 100%;
-    overflow: hidden;
-    background: #222;
-    @include perspective(600px);
-  }
-}
-
-.md-modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 90%;
-  max-width: 1140px;
-  min-width: 320px;
-  height: auto;
-  z-index: 2000;
-  
-  @include backface-visibility(hidden);
- /* visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-  */
-  @include transform(translateX(-50%) translateY(-50%));
-  
-  /*-webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);*/
-}
-
-.md-show {
-  visibility: visible;
-}
-
-.md-overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  opacity: 0;
-  background: rgba(128,67,11, 0.9);
-  
-  @include transition (all 0.3s);
-
-/*  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;*/
-}
-
-.md-show ~ .md-overlay {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Content styles */
-
-.md-content {
-  color: #fff;
-  background:$orange;
-  position: relative;
-  padding: 20em 16em;
-  overflow: auto;
-  margin: 0 auto;
-  
-  button {
-    position: absolute;
-    background: transparent;
-    float: right;
-    padding: 1em;
-    border: 2px solid $white;
-    border-radius: 50%;
-  }
-  header, article{
-  	width: 50%;
-  	float: left;
-  }
-}
-
-.md-show.md-effect-16 ~ {
-  .md-overlay {
-    background: rgba(171,101,38, 0.5);
-  }
-  .container {
-    -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    filter: blur(3px);
-  }
-}
-
-.md-effect-16 .md-content {
-  -webkit-transform: translateY(-5%);
-  -moz-transform: translateY(-5%);
-  -ms-transform: translateY(-5%);
-  transform: translateY(-5%);
-  opacity: 0;
-}
-
-.md-show.md-effect-16 ~ .container, .md-effect-16 .md-content {
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-.md-show.md-effect-16 .md-content {
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-  opacity: 1;
-}
 
 /* navigation styles */
 
@@ -343,16 +222,20 @@ a{
 	@include display(flex);
 	@include flex-direction(row);
 	> figure {
-		@include align-self(flex-start);
-		@include display(flex);
-		@include flex-direction(row);
-		@include align-items(center);
-		@include justify-content(center);
 		width: 15em;
 		height: 100%;
 		background-color: $orange;
 		border-right: 1px solid darken($orange,15%);
 		@include transition (all 0.2s ease-in-out);
+		a{
+			@include align-self(flex-start);
+			@include display(flex);
+			@include flex-direction(row);
+			@include align-items(center);
+			@include justify-content(center);
+			width: 100%;
+			height: 100%;
+		}
 		img{
 			width: 8.333em;
 		}
@@ -420,12 +303,18 @@ a{
 			@include justify-content(flex-start);
 			figure{
 				width: 33.357142857142854%;
-				padding: 6em 0;
 				border-right: 1px solid rgb(70,64,53);
 				display: block;
 				@include transition (all 0.2s ease-in-out);
 				@include display(flex);
 				@include justify-content(center);
+				a{
+					display: block;
+					padding: 6em 0;
+					text-align: center;
+					width: 100%;
+					height: 100%;
+				}
 				img{
 					width: 6em;
 					opacity: .25;
