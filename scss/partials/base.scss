@@ -219,6 +219,7 @@ a{
 	box-shadow: 0px 2px 6px 0px rgba( 0, 0, 0, 0.2);
 	z-index: 2;
 	position: fixed;
+	overflow: hidden;
 	@include display(flex);
 	@include flex-direction(row);
 	> figure {
@@ -271,6 +272,8 @@ a{
 						color: $orange;
 					}
 					&:active h6{
+						padding-top: 2.25em;
+						padding-bottom: 1.75em;
 						background: rgb( 239, 239, 239);
 						box-shadow: inset 3px 0 1px 0 #e3e3e3;
 					}

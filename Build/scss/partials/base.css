@@ -260,6 +260,7 @@ a {
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
   z-index: 2;
   position: fixed;
+  overflow: hidden;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -369,6 +370,8 @@ a {
         .main-nav nav ul li a:hover h6 {
           color: #f6851f; }
         .main-nav nav ul li a:active h6 {
+          padding-top: 2.25em;
+          padding-bottom: 1.75em;
           background: #efefef;
           box-shadow: inset 3px 0 1px 0 #e3e3e3; }
 
