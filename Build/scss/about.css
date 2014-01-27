@@ -974,7 +974,7 @@ figure img {
     margin-top: 4em; }
     .about .experience .resume article {
       width: 100%;
-      margin-bottom: 4em; }
+      margin-bottom: 6em; }
       .about .experience .resume article header {
         width: 40.4386%; }
       .about .experience .resume article div {
@@ -997,8 +997,7 @@ figure img {
   .about * header .innerwrapper h1 {
     font-size: 6em !important; }
   .about .recomendation .quote .by-line .by-thumb {
-    width: 20em;
-    height: 20em; }
+    width: 20em; }
   .about .recomendation .quote-bottom {
     -webkit-box-orient: column !important;
     -moz-box-orient: column !important;
