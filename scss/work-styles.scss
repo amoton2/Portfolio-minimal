@@ -37,7 +37,7 @@ figure img{
 	max-width: 100%;
 }
 .leader{
-	min-height: 44em;
+	min-height: 320px;
 	max-height: 100em;
 	position: relative;
 	overflow: hidden;
@@ -1117,6 +1117,22 @@ figure img{
 			}
 			article{
 				width: flex-grid(10);
+			}
+		}
+	}
+	.gmcvbmobile{
+		.homepage{
+			header{
+				@include flex-direction(column);
+				@include align-items(center);
+				figure{
+					width: flex-grid(6);
+					margin-right: 0;
+				}
+				article{
+					width: flex-grid(10);
+					padding-top: 2em;
+				}
 			}
 		}
 	}
