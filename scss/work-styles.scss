@@ -36,34 +36,59 @@ figure img{
 	width: 100%;
 	max-width: 100%;
 }
-
-.gmcvb{
-
-	> header{
-		background: rgb(0, 189, 200);
-		@include display(flex);
-		@include flex-direction(row);
-		@include justify-content(flex-start);
-		padding-top: 5em;
-		max-height: 123em;
-		article{
-			width: flex-grid(5);
-			padding-top: 10em;
-			position: relative;
-		}
-		figure{
-			width: flex-grid(9);
-			margin-left: -17.105263157894736%;
-			margin-bottom: -5em;
+.leader{
+	min-height: 44em;
+	max-height: 100em;
+	position: relative;
+	overflow: hidden;
+	figure{
+		div{
+			width: flex-grid(12);
 			img{
-				float: left;
-				width: 128.975%;
-				max-width: 1095px;
+				margin: 0 auto;
+				display: block;				
 			}
 		}
 	}
+	.wrapper{
+		width: 100%;
+		position: absolute;
+		bottom: 0px;
+		padding-bottom: 4em;
+		padding-top: 33em;
+		.row{
+			@include align-items(center);
+			@include justify-content(center);
+			section{
+				width: flex-grid(2);
+				margin-right: flex-gutter();
+				border-right: 1px solid rgba(255,255,255, .40);
+				&:last-child{
+					border-right: none;
+				}
+				.dash{
+
+				}
+			}
+		}
+	}
+}
+
+.gmcvb{
+
+	.leader{
+		background: rgb(0, 189, 200);
+		figure{
+			img{
+				max-width: 1000px; 
+			}
+		}
+		.wrapper{
+			@include background-image(linear-gradient(rgba(0,178,188,0) 50%,rgba(0,178,188,1) 100%))
+		}
+	}
 	.intro-copy{
-		padding: 25em 0 10em 0;
+		padding: 15em 0 10em 0;
 
 		h2{
 			width: flex-grid(12);
@@ -241,30 +266,19 @@ figure img{
 
 }
 .joingr{
-	> header{
+	.leader{
 		background: rgb(214,25,5);
-		@include display(flex);
-		@include flex-direction(row);
-		@include justify-content(flex-start);
-		max-height: 123em;
-		article{
-			width: flex-grid(5);
-			padding-top: 10em;
-			position: relative;
-		}
 		figure{
-			width: flex-grid(9);
-			margin-bottom: -2em;
-			margin-left: -17.105263157894736%;
 			img{
-				float: left;
-				width: 122.52%;
-				max-width: 1039px;
+				max-width: 916px; 
 			}
+		}
+		.wrapper{
+			@include background-image(linear-gradient(rgba(214,25,5,0) 50%,rgba(214,25,5,1) 100%))
 		}
 	}
 	.intro-copy{
-		padding: 25em 0 10em 0;
+		padding: 15em 0 10em 0;
 
 		h2{
 			width: flex-grid(12);
@@ -369,28 +383,19 @@ figure img{
 	}
 }
 .usaa{
-	> header{
-		background: rgb(140,185,214) url(../img/work-usaa-headbg.png) no-repeat top center;
-		@include display(flex);
-		@include flex-direction(row);
-		@include justify-content(flex-start);
-		max-height: 123em;
-		article{
-			width: flex-grid(5);
-			padding-top: 10em;
-			position: relative;
-		}
+	.leader{
+		background: rgb(146,183,208);
 		figure{
-			width: flex-grid(7);
 			img{
-				float: left;
-				width: 154.96%;
-				max-width: 1015px;
+				max-width: 915px; 
 			}
+		}
+		.wrapper{
+			@include background-image(linear-gradient(rgba(146,183,208,0) 0%,rgba(146,183,208,1) 100%))
 		}
 	}
 	.intro-copy{
-		padding: 25em 0 10em 0;
+		padding: 15em 0 10em 0;
 
 		h2{
 			width: flex-grid(12);
@@ -465,30 +470,19 @@ figure img{
 
 }
 .ac{
-	> header{
-		background: rgb(0,0,0) url(../img/work-ac-headerbg.jpg) no-repeat top center;
-		@include display(flex);
-		@include flex-direction(row);
-		@include justify-content(flex-start);
-		max-height: 123em;
-		article{
-			width: flex-grid(5);
-			padding-top: 10em;
-			position: relative;
-		}
+	.leader{
+		background: black url(../img/work-ac-headerbg.jpg) no-repeat top center;
 		figure{
-			width: flex-grid(8);
-			margin-left: -17.105263157894736%;
-			margin-top: 23em;
 			img{
-				float: left;
-				width: 167.42%;
-				max-width: 1259px;
+				max-width: 915px; 
 			}
+		}
+		.wrapper{
+			@include background-image(linear-gradient(rgba(0,0,0,0) 50%, black 100%))
 		}
 	}
 	.intro-copy{
-		padding: 25em 0 10em 0;
+		padding: 15em 0 10em 0;
 
 		h2{
 			width: flex-grid(12);
@@ -557,29 +551,19 @@ figure img{
 	}
 }
 .facecard{
-	> header{
-		@include linear-gradient(90deg, rgb(202,204,207) 0%, rgb(242,243,244) 100%);
-		@include display(flex);
-		@include flex-direction(row);
-		@include justify-content(flex-start);
-		max-height: 123em;
-		article{
-			width: flex-grid(5);
-			padding-top: 10em;
-			position: relative;
-		}
+	.leader{
+		background: rgb(240,214,7);
 		figure{
-			width: flex-grid(8);
-			margin-left: -17.105263157894736%;
 			img{
-				float: left;
-				width: 166.23%;
-				max-width: 1250px;
+				max-width: 915px; 
 			}
+		}
+		.wrapper{
+			@include background-image(linear-gradient(rgba(240,214,7,0) 50%, rgb(240,214,7) 100%))
 		}
 	}
 	.intro-copy{
-		padding: 25em 0 10em 0;
+		padding: 15em 0 10em 0;
 
 		h2{
 			width: flex-grid(12);
@@ -661,29 +645,21 @@ figure img{
 	}
 }
 .bp{
-	> header{
-		@include linear-gradient(90deg, rgb(200,193,182) 0%, rgb(196,188,177) 100%);
-		@include display(flex);
-		@include flex-direction(row);
-		@include justify-content(flex-start);
-		max-height: 123em;
-		article{
-			width: flex-grid(5);
-			padding-top: 10em;
-			position: relative;
-		}
+	.leader{
+		background: rgb(215,208,198) url(../img/texture_50.png) repeat;
 		figure{
-			width: flex-grid(8);
-			margin-left: -17.105263157894736%;
 			img{
-				float: left;
-				width: 160.45%;
-				max-width: 1205px;
+				max-width: 730px;
+				display: block;
+				margin: 0 auto;
 			}
+		}
+		.wrapper{
+			@include background-image(linear-gradient(rgba(146,137,126,0) 0%,rgba(146,137,126,1) 100%))
 		}
 	}
 	.intro-copy{
-		padding: 25em 0 10em 0;
+		padding: 15em 0 10em 0;
 
 		h2{
 			width: flex-grid(12);
@@ -783,31 +759,28 @@ figure img{
 	}
 }
 .gmcvbmobile{
-	padding-bottom: 10em;
-	> header{
-		@include linear-gradient(0deg, rgb(229,146,0) -40%, rgb(249,192,0) 100%);
-		@include display(flex);
-		@include flex-direction(row);
-		@include justify-content(flex-start);
-		max-height: 123em;
-		article{
-			width: flex-grid(5);
-			padding-top: 10em;
-			position: relative;
-		}
+	/*img{
+		float: left;
+		width: 179.22%;
+		
+	}*/
+	.leader{
+		background: rgb(249,192,0) url(../img/texture_50.png) repeat;
 		figure{
-			width: flex-grid(8);
-			margin-left: -10%;
-			margin-bottom: -5em;
 			img{
 				float: left;
-				width: 179.22%;
-				max-width: 1346px;
+				width: 110%;
+				display: block;
+				margin: 0 auto;
+				margin-left: 5%;
 			}
+		}
+		.wrapper{
+			@include background-image(linear-gradient(rgba(249,192,0,0) 0%,rgba(249,192,0,1) 100%))
 		}
 	}
 	.intro-copy{
-		padding: 25em 0 10em 0;
+		padding: 15em 0 10em 0;
 
 		h2{
 			width: flex-grid(12);
@@ -875,6 +848,7 @@ figure img{
 		}
 	}
 	.multi:last-child{
+		margin-bottom: 10em;
 		figure{
 			@include display(flex);
 			@include justify-content(center);
@@ -937,7 +911,7 @@ figure img{
 	.bp,
 	.facecard,
 	.ac {
-		> header{
+		/*> header{
 			overflow: hidden;
 			max-height: 100em;
 			min-height: 99em;
@@ -959,7 +933,7 @@ figure img{
 					}
 				}
 			}	
-		}
+		}*/
 		.intro-copy{
 			padding: 10em 0;
 			> div{
@@ -1025,40 +999,6 @@ figure img{
 			}
 		}
 	}
-	.gmcvbmobile{
-		> header{
-			figure{
-				margin-top: -8em;
-				img{
-					min-width: 800px;
-					max-width: 850px;
-				}
-			}
-		}
-	}
-	.joingr{
-		> header{
-			figure{
-
-				img{
-					margin-left: 10%;
-					max-width: 640px;
-				}
-			}
-		}
-	}
-	.usaa{
-		> header{
-			background-size: cover;
-			figure{
-				margin-top: 0 !important;
-				img{
-					margin-left: 20%;
-					max-width: 600px;
-				}
-			}
-		}
-	}
 	.bp{
 		.type-color{
 			.top{
@@ -1070,27 +1010,24 @@ figure img{
 			}
 		}
 	}
-	.facecard{
-		> header{
-			figure{
-				margin-top: 0px !important;
-				img{
-					width: 380% !important;
-					margin-left: -20%;
-				}
-			}
-		}
-	}
 	.ac{
 		> header{
 			background-size: cover;
-			figure{
-				margin-top: 0 !important;
-			}
 		}
 	}
 }
 @media only screen and (max-width:721px){
+	.leader{
+		.wrapper{
+			position: relative;
+			padding-top: 0;
+			.row{
+				section{
+					width: flex-grid(4);
+				}
+			}
+		}
+	}
 	.credits{
 		width: 100% !important;
 	}
@@ -1114,22 +1051,6 @@ figure img{
 			}
 		}
 	}
-	.gmcvbmobile{
-		.homepage{
-			header{
-				@include flex-direction(column);
-				@include align-items(center);
-				figure{
-					width: flex-grid(6);
-					margin-right: 0;
-				}
-				article{
-					width: flex-grid(10);
-					padding-top: 2em;
-				}
-			}
-		}
-	}
 	.joingr{
 		.wires{
 			> div{
@@ -1148,14 +1069,6 @@ figure img{
 		}
 	}
 	.usaa{
-		> header{
-			figure{
-				margin-top: -8em !important;
-				img{
-					margin-left: 10%;
-				}
-			}
-		}
 		.concept{
 			> div{
 				@include flex-direction(column);
@@ -1185,17 +1098,6 @@ figure img{
 		}
 	}
 	.bp{
-		> header{
-			> div{
-				figure{
-					margin-top: 0;
-					img{
-						width: 400% !important;
-						margin-left: -80%;
-					}
-				}
-			}
-		}
 		.stationary{
 			header{
 				h2{
@@ -1233,13 +1135,6 @@ figure img{
 		}
 	}
 	.ac{
-		> header{
-			figure{
-				img{
-					width: 300% !important;
-				}
-			}
-		}
 		.microsite{
 			header{
 				@include flex-direction(column !important);

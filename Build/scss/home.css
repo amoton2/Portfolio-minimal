@@ -131,6 +131,9 @@ small {
   font-weight: bold;
   color: #333333; }
 
+.light-con {
+  font-weight: 400; }
+
 @font-face {
   font-family: "minimal-icon";
   src: url(../Fonts/minimal-icons/minimal-icon.eot);

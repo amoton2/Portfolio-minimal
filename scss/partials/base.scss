@@ -136,6 +136,9 @@ small{
 	font-weight: bold;
 	color: $hl-grey;
 }
+.light-con{
+	font-weight: $light-con;
+}
 // Icons
 
 @import "partials/icons";
