@@ -38,7 +38,7 @@ figure img{
 }
 .leader{
 	min-height: 320px;
-	max-height: 120em;
+	max-height: 100em;
 	position: relative;
 	overflow: hidden;
 	figure{
@@ -1011,7 +1011,7 @@ figure img{
 		}
 	}
 	.ac{
-		> header{
+		.leader{
 			background-size: cover;
 		}
 	}
@@ -1023,7 +1023,7 @@ figure img{
 			position: relative;
 			padding-top: 0;
 			background-image: none !important;
-			background-color: #f8f8f8; 
+			background-color: #f3f2f2; 
 			.row{
 				section{
 					margin-top: 4em;
