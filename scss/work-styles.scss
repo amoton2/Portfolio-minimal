@@ -38,7 +38,7 @@ figure img{
 }
 .leader{
 	min-height: 320px;
-	max-height: 100em;
+	max-height: 120em;
 	position: relative;
 	overflow: hidden;
 	figure{
@@ -1018,12 +1018,21 @@ figure img{
 }
 @media only screen and (max-width:721px){
 	.leader{
+		overflow: visible;
 		.wrapper{
 			position: relative;
 			padding-top: 0;
+			background-image: none !important;
+			background-color: #f8f8f8; 
 			.row{
 				section{
+					margin-top: 4em;
 					width: flex-grid(4);
+					border-right: none;
+					.white{
+						color: #8c8984 !important;
+						letter-spacing: 0px !important;
+					}
 				}
 			}
 		}
